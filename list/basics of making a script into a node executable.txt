@@ -1,0 +1,15 @@
+// the three main steps for setting up a node.js project to be executed from anywhere:
+
+// step 1: create a package.json file and, in the metadata object, add in a bin {nls: "myScript.js"}
+property, which lets the package.json file know that myScript.js in a binary,
+i.e. an executable
+
+// step 2: in your desired "script to execute" (myScript.js) add this line in
+#!/usr/bin/env node
+// it tells the computer that we want to use NODE to execute the file.
+
+// step 3: link the project. Via terminal, in the project directory, type
+// npm link
+// it should make some files. 
+
+// now if you type "nls" in the terminal, it gets interpreted as a command and runs the associated script.

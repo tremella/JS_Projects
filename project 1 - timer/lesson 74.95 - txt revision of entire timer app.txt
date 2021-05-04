@@ -1,0 +1,38 @@
+There are four relevant files to the app.
+
+    The HTML file, which has the buttons, imports the stylesheet, and draws the circle.
+    timer.js, where the Timer class is defined
+    index.js, where the timer instance is called, along with the callback functions to handle visuals
+    style.css, which he gave us and we didn't study.
+**********************************
+The important things in HTML:
+> fontawesome accessible via
+    <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+       />
+> icons accessible via 
+    <button id="start"><i class="fas fa-play"></i></button>
+**********************************
+the important things in timer.js: 
+
+> the constructor function ensures that the
+basic elements (buttons, time input) exist when the instance is made. 
+
+> the callbacks are also created because we want to pass in the visual functionality
+of the border ticking down. All the callbacks are called "onStart"/"onComplete" etc
+
+> the reason the visual functionality was passed in
+via the instance and not defined in the class, was because it's kind of a
+different and not-totally-necessary process. Keeping it out of the class
+definition keeps the code readable.
+**********************************
+the important things  in index.js
+>this is where we invoke the INSTANCE of the Timer class. 
+> we pass in the buttons into the constructor, plus the optional callbacks to handle the animation
+
+> this is where we import the duration field, and the buttons, using document.querySelector
+> we also import the circle
+? we also assign the perimeter, for the sake of animation later.
+
+>the dashoffset makes the dasharray (the border of the circle) invsible.

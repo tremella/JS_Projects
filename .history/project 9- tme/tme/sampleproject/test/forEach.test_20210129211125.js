@@ -1,0 +1,1 @@
+const { forEach } = require('../index')
